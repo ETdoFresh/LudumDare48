@@ -8,10 +8,12 @@ public class SwingAxeAction : MonoBehaviour
     [SerializeField] private float cooldown = 1;
     private SwingAxeModel _swingAxeModel;
     private SwingAxeTrigger _swingAxeTrigger;
+    private Direction _direction;
     private Coroutine _coroutine;
 
     private void Awake()
     {
+        _direction = transform.parent.GetComponentInChildren<Direction>();
         _swingAxeModel = GetComponentInChildren<SwingAxeModel>(true);
         _swingAxeTrigger = GetComponentInChildren<SwingAxeTrigger>(true);
     }
@@ -32,7 +34,7 @@ public class SwingAxeAction : MonoBehaviour
     {
         _swingAxeModel.Enable();
         var startRotation = -45f;
-        var finishRotation = startRotation - 135f;
+        var finishRotation = _direction.IsLeft ? startRotation + 135f : startRotation - 135f;
         var startTime = Time.time;
         var finishTime = startTime + duration;
         var time = startTime;
