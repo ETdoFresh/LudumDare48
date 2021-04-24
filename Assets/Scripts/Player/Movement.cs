@@ -11,7 +11,7 @@ public class Movement : MonoBehaviour
         _rigidbody2D = GetComponentInParent<Rigidbody2D>();
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         var forceVector = force * localInput.horizontal * Vector2.right;
         _rigidbody2D.AddForce(forceVector);
