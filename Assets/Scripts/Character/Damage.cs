@@ -32,6 +32,9 @@ public class Damage : MonoBehaviour
    {
       var damager = other.GetComponent<Damager>();
       if (!damager) return;
+      foreach(var myDamager in characterTransform.GetComponentsInChildren<Damager>())
+         if (myDamager == damager)
+            return;
       TakeDamage(damager);
    }
 
