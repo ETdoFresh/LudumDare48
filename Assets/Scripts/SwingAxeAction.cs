@@ -6,16 +6,20 @@ public class SwingAxeAction : MonoBehaviour
     [SerializeField] private LocalInput localInput;
     [SerializeField] private float duration = 1;
     [SerializeField] private float cooldown = 1;
+    private Transform _characterTransform;
     private SwingAxeModel _swingAxeModel;
     private SwingAxeTrigger _swingAxeTrigger;
+    private DigTrigger _digTrigger;
     private Direction _direction;
     private Coroutine _coroutine;
 
     private void Awake()
     {
-        _direction = transform.parent.GetComponentInChildren<Direction>();
+        _characterTransform = transform.parent;
+        _direction = _characterTransform.GetComponentInChildren<Direction>();
         _swingAxeModel = GetComponentInChildren<SwingAxeModel>(true);
         _swingAxeTrigger = GetComponentInChildren<SwingAxeTrigger>(true);
+        _digTrigger = GetComponentInChildren<DigTrigger>(true);
     }
 
     private void Update()
@@ -33,6 +37,12 @@ public class SwingAxeAction : MonoBehaviour
     private IEnumerator SwingAxeCoroutine()
     {
         _swingAxeModel.Enable();
+        var myTransform = transform;
+        var localPosition = myTransform.localPosition;
+        var spawnPosition = _direction.IsLeft
+            ? _characterTransform.TransformPoint(-localPosition.x, localPosition.y, localPosition.z)
+            : myTransform.position;
+        var digInstance = _digTrigger.CreateNewActiveDigInstance(spawnPosition, myTransform.lossyScale);
         var startRotation = -45f;
         var finishRotation = _direction.IsLeft ? startRotation + 135f : startRotation - 135f;
         var startTime = Time.time;
@@ -46,7 +56,9 @@ public class SwingAxeAction : MonoBehaviour
             yield return null;
             time += Time.deltaTime;
         }
+
         _swingAxeModel.Disable();
+        Destroy(digInstance);
         _coroutine = null;
     }
 }

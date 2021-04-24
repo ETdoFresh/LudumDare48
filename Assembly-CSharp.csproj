@@ -52,15 +52,18 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\LocalInput.cs" />
-     <Compile Include="Assets\Scripts\LocalInputReader.cs" />
-     <Compile Include="Assets\Scripts\SwingAxeAction.cs" />
-     <Compile Include="Assets\Scripts\SwingAxeModel.cs" />
-     <Compile Include="Assets\Scripts\SwingAxeTrigger.cs" />
      <Compile Include="Assets\Scripts\Direction.cs" />
      <Compile Include="Assets\Scripts\FlipScaleWithDirection.cs" />
      <Compile Include="Assets\Scripts\Movement.cs" />
+     <Compile Include="Assets\Scripts\SwingAxeModel.cs" />
+     <Compile Include="Assets\Scripts\LocalInput.cs" />
+     <Compile Include="Assets\Scripts\LocalInputReader.cs" />
+     <Compile Include="Assets\Scripts\SwingAxeAction.cs" />
+     <Compile Include="Assets\Scripts\BreakApartChunk.cs" />
+     <Compile Include="Assets\Scripts\SwingAxeTrigger.cs" />
+     <Compile Include="Assets\Scripts\DigTrigger.cs" />
      <Compile Include="Assets\Scripts\Hop.cs" />
+     <Compile Include="Assets\Scripts\ResetLevel.cs" />
  <Reference Include="UnityEngine">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.2f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
  </Reference>
@@ -646,6 +649,9 @@
  <Reference Include="Unity.TextMeshPro">
  <HintPath>C:/Users/etgarcia/Desktop/Unity Projects/LudumDare48/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
  </Reference>
+ <Reference Include="Unity.2D.Sprite.Editor">
+ <HintPath>C:/Users/etgarcia/Desktop/Unity Projects/LudumDare48/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
+ </Reference>
  <Reference Include="UnityEditor.UI">
  <HintPath>C:/Users/etgarcia/Desktop/Unity Projects/LudumDare48/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
  </Reference>
@@ -654,9 +660,6 @@
  </Reference>
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Users/etgarcia/Desktop/Unity Projects/LudumDare48/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
- </Reference>
- <Reference Include="Unity.2D.Sprite.Editor">
- <HintPath>C:/Users/etgarcia/Desktop/Unity Projects/LudumDare48/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>
