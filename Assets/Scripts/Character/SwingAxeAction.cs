@@ -4,6 +4,7 @@ using UnityEngine;
 public class SwingAxeAction : MonoBehaviour
 {
     [SerializeField] private LocalInput localInput;
+    [SerializeField] private AudioPlayer swingAxeSound;
     [SerializeField] private float duration = 1;
     [SerializeField] private float cooldown = 1;
     private Transform _characterTransform;
@@ -36,6 +37,7 @@ public class SwingAxeAction : MonoBehaviour
 
     private IEnumerator SwingAxeCoroutine()
     {
+        if (swingAxeSound) swingAxeSound.Play();
         _swingAxeModel.ActivateGameObject();
         _swingAxeTrigger.ActivateGameObject();
         var myTransform = transform;
@@ -43,6 +45,7 @@ public class SwingAxeAction : MonoBehaviour
         var spawnPosition = _direction.IsLeft
             ? _characterTransform.TransformPoint(-localPosition.x, localPosition.y, localPosition.z)
             : myTransform.position;
+        _swingAxeTrigger.transform.position = spawnPosition;
         var digInstance = _digTrigger.CreateNewActiveDigInstance(spawnPosition, myTransform.lossyScale);
         var startRotation = -45f;
         var finishRotation = _direction.IsLeft ? startRotation + 135f : startRotation - 135f;

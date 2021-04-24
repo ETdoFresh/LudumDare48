@@ -227,6 +227,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 11400000, guid: d3c34d068747d934fbf722770508ad64, type: 2}
   characterTransform: {fileID: 0}
+  stunBehaviour: {fileID: 0}
   health: 1
   healthCapacity: 5
 --- !u!1 &2365468476852931819
@@ -443,6 +444,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   localInput: {fileID: 11400000, guid: ba0e54a542f480c4daeaf5b35abd896c, type: 2}
+  swingAxeSound: {fileID: 11400000, guid: 4f057b01dbe52d34896005af00955408, type: 2}
   duration: 0.2
   cooldown: 1
 --- !u!1 &3340466991107722741
@@ -488,6 +490,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd332798164f45e429757eccd3d67b3a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  localInput: {fileID: 11400000, guid: ba0e54a542f480c4daeaf5b35abd896c, type: 2}
   isLeft: 0
 --- !u!1 &3429096774477312113
 GameObject:

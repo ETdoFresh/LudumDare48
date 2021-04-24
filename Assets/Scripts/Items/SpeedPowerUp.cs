@@ -4,6 +4,7 @@ public class SpeedPowerUp : MonoBehaviour
 {
     [SerializeField] private float speedAmount = 0.5f;
     [SerializeField] private GameObject powerUpGameObject;
+    [SerializeField] private AudioPlayer collectSound;
 
     private void Awake()
     {
@@ -22,5 +23,6 @@ public class SpeedPowerUp : MonoBehaviour
     {
         var speed = collector.transform.parent.GetComponentInChildren<Speed>();
         if (speed) speed.Add(speedAmount);
+        if (collectSound) collectSound.Play();
     }
 }

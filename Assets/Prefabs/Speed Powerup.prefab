@@ -187,6 +187,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speedAmount: 0.5
   powerUpGameObject: {fileID: 0}
+  collectSound: {fileID: 11400000, guid: 76a3ec11e13551a449ce2124ac9daed1, type: 2}
 --- !u!1 &6739953000011583264
 GameObject:
   m_ObjectHideFlags: 0
