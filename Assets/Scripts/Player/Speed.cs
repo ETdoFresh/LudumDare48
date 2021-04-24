@@ -3,7 +3,7 @@ using UnityEngine;
 public class Speed : MonoBehaviour
 {
     [SerializeField] private Player player;
-    [SerializeField] private float value;
+    [SerializeField] private float value = 1;
     public float Value => value;
     
     private void OnEnable()
@@ -15,5 +15,10 @@ public class Speed : MonoBehaviour
     {
         if (player.speed == this)
             player.speed = null;
+    }
+
+    public void Add(float amount)
+    {
+        value += amount;
     }
 }
