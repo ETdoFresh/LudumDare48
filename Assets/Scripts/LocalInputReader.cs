@@ -13,6 +13,7 @@ public class LocalInputReader : MonoBehaviour
         if (_singleton) return;
         var localInput= Instantiate(localInputPrefab);
         localInput.name = localInputPrefab.name;
+        DontDestroyOnLoad(localInput);
     }
 
     private void Awake()

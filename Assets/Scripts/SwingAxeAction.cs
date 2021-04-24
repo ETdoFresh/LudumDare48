@@ -36,7 +36,8 @@ public class SwingAxeAction : MonoBehaviour
 
     private IEnumerator SwingAxeCoroutine()
     {
-        _swingAxeModel.Enable();
+        _swingAxeModel.ActivateGameObject();
+        _swingAxeTrigger.ActivateGameObject();
         var myTransform = transform;
         var localPosition = myTransform.localPosition;
         var spawnPosition = _direction.IsLeft
@@ -57,7 +58,8 @@ public class SwingAxeAction : MonoBehaviour
             time += Time.deltaTime;
         }
 
-        _swingAxeModel.Disable();
+        _swingAxeModel.DeactivateGameObject();
+        _swingAxeTrigger.DeactivateGameObject();
         Destroy(digInstance);
         _coroutine = null;
     }

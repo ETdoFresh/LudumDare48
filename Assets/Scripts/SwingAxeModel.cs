@@ -15,14 +15,4 @@ public class SwingAxeModel : MonoBehaviour
         eulerAngles.z = rotation;
         _transform.eulerAngles = eulerAngles;
     }
-
-    public void Enable()
-    {
-        gameObject.SetActive(true);
-    }
-
-    public void Disable()
-    {
-        gameObject.SetActive(false);
-    }
 }
