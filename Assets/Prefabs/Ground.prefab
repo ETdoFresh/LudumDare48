@@ -54,11 +54,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2539384994875013925, guid: e8817e46fd71fe34b97deb6f6aebf9eb, type: 3}
       propertyPath: m_Name
-      value: Chunk0
+      value: Chunk
       objectReference: {fileID: 0}
     - target: {fileID: 2539384994875013926, guid: e8817e46fd71fe34b97deb6f6aebf9eb, type: 3}
       propertyPath: m_RootOrder
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2539384994875013926, guid: e8817e46fd71fe34b97deb6f6aebf9eb, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 2539384994875013926, guid: e8817e46fd71fe34b97deb6f6aebf9eb, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 2539384994875013926, guid: e8817e46fd71fe34b97deb6f6aebf9eb, type: 3}
       propertyPath: m_LocalPosition.x
@@ -66,7 +74,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2539384994875013926, guid: e8817e46fd71fe34b97deb6f6aebf9eb, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -5
+      value: -10
       objectReference: {fileID: 0}
     - target: {fileID: 2539384994875013926, guid: e8817e46fd71fe34b97deb6f6aebf9eb, type: 3}
       propertyPath: m_LocalPosition.z
