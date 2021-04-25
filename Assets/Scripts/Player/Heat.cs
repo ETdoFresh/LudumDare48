@@ -14,9 +14,11 @@ public class Heat : MonoBehaviour
     [SerializeField] private float maxHeatRate = 1;
     [SerializeField] private float coolRate = 1;
     [SerializeField] private float damageRate = 1;
+    [SerializeField] private int coolingWispCount;
 
     public float Value => value;
     public float Capacity => capacity;
+    public float CoolWispCount => coolingWispCount;
     private bool IsBurning => value >= capacity;
 
     private void Awake()
@@ -41,6 +43,7 @@ public class Heat : MonoBehaviour
         var inHeat = transform.position.y < startHeatLevel;
         if (inHeat) IncreaseHeat();
         if (!inHeat) DecreaseHeat();
+        if (IsBurning) UseCoolingWisp();
         if (IsBurning) TakeDamage();
 
     }
@@ -67,8 +70,20 @@ public class Heat : MonoBehaviour
         value = Mathf.Max(value, 0);
     }
 
+    private void UseCoolingWisp()
+    {
+        if (coolingWispCount <= 0) return;
+        value = 0;
+        coolingWispCount--;
+    }
+
     private void TakeDamage()
     {
         damage.EnvironmentDamage(damageRate * Time.deltaTime);
+    }
+
+    public void AddCoolingWisp()
+    {
+        coolingWispCount++;
     }
 }

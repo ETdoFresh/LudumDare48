@@ -11,8 +11,11 @@ public class Oxygen : MonoBehaviour
     [SerializeField] private float reductionRate = 1f/10;
     [SerializeField] private float increaseRate = 1f;
     [SerializeField] private float damageRate = 1f/10;
+    [SerializeField] private int airTankCount;
+    
     public float Value => value;
     public float Capacity => capacity;
+    public float AirTankCount => airTankCount;
     private bool InWater => waterDetector && waterDetector.InWater;
     private bool NoOxygen => value <= 0;
 
@@ -27,6 +30,7 @@ public class Oxygen : MonoBehaviour
     {
         if (InWater) LowerOxygenLevels();
         if (!InWater) IncreaseOxygenLevels();
+        if (NoOxygen) UseAirTank();
         if (NoOxygen) TakeDamage();
     }
 
@@ -53,8 +57,20 @@ public class Oxygen : MonoBehaviour
         value = Mathf.Min(value, capacity);
     }
 
+    private void UseAirTank()
+    {
+        if (airTankCount <= 0) return;
+        value = capacity;
+        airTankCount--;
+    }
+
     private void TakeDamage()
     {
         damage.EnvironmentDamage(damageRate * Time.deltaTime);
+    }
+
+    public void AddAirTank()
+    {
+        airTankCount++;
     }
 }
