@@ -4,6 +4,7 @@ public class Movement : MonoBehaviour
 {
     [SerializeField] private LocalInput localInput;
     [SerializeField] private float force = 1;
+    [SerializeField] private float speedDivisor = 3;
     private Transform _characterTransform;
     private Rigidbody2D _rigidbody2D;
     private Speed _speed;
@@ -17,7 +18,8 @@ public class Movement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        var forceVector = force * localInput.horizontal * _speed.Value * Vector2.right;
+        var fractionOfSpeed = Mathf.Max(_speed.Value / speedDivisor, 1);
+        var forceVector = force * localInput.horizontal * fractionOfSpeed * Vector2.right;
         _rigidbody2D.AddForce(forceVector);
     }
 }

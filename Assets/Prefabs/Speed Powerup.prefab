@@ -185,7 +185,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d189984bd5d4174abfb4c8bf5c5baa8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedAmount: 0.5
+  speedAmount: 0.25
   powerUpGameObject: {fileID: 0}
   collectSound: {fileID: 11400000, guid: 76a3ec11e13551a449ce2124ac9daed1, type: 2}
 --- !u!1 &6739953000011583264

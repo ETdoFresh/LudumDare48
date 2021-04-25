@@ -7,7 +7,7 @@ public class SpeedUI : MonoBehaviour
     [SerializeField] private Slider slider;
 
     private float Speed => player ? player.speed ? player.speed.Value : 1 : 1;
-    private static float SpeedCapacity => 2;
+    private float SpeedCapacity => player ? player.speed ? player.speed.Capacity : 5 : 5;
 
     private void Awake()
     {

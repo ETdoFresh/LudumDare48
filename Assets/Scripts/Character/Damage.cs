@@ -7,6 +7,7 @@ public class Damage : MonoBehaviour
    [SerializeField] private StunBehaviour stunBehaviour;
    [SerializeField] private float health = 1;
    [SerializeField] private float healthCapacity = 5;
+   [SerializeField] private DropBehaviour dropBehaviour;
 
    public float Health => health;
    public float HealthCapacity => healthCapacity;
@@ -15,6 +16,7 @@ public class Damage : MonoBehaviour
    {
       characterTransform = transform.parent;
       stunBehaviour = characterTransform.GetComponentInChildren<StunBehaviour>();
+      dropBehaviour = characterTransform.GetComponentInChildren<DropBehaviour>();
    }
 
    private void OnEnable()
@@ -43,8 +45,11 @@ public class Damage : MonoBehaviour
       health -= damager.Damage;
       if (stunBehaviour)
          stunBehaviour.Stun(damager);
-      if (health <= 0)
-         Destroy(characterTransform.gameObject);
+
+      if (health > 0) return;
+      if (dropBehaviour)
+         dropBehaviour.Drop();
+      Destroy(characterTransform.gameObject);
    }
 
    public void EnvironmentDamage(float amount)
