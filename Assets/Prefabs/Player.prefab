@@ -335,7 +335,7 @@ MonoBehaviour:
   player: {fileID: 11400000, guid: d3c34d068747d934fbf722770508ad64, type: 2}
   characterTransform: {fileID: 0}
   stunBehaviour: {fileID: 0}
-  health: 15
+  health: 5
   healthCapacity: 5
   dropBehaviour: {fileID: 0}
 --- !u!1 &2310829068300814484
@@ -1296,6 +1296,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 11400000, guid: d3c34d068747d934fbf722770508ad64, type: 2}
+  score: {fileID: 11400000, guid: 6bbb5e85e245fa44995c82a473419c3a, type: 2}
   value: 0
 --- !u!1 &5867249256873942997
 GameObject:
@@ -1342,6 +1343,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   localInput: {fileID: 11400000, guid: ba0e54a542f480c4daeaf5b35abd896c, type: 2}
   force: 200
+  speedDivisor: 3
 --- !u!1 &7501758532550917392
 GameObject:
   m_ObjectHideFlags: 0
@@ -1441,6 +1443,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 11400000, guid: d3c34d068747d934fbf722770508ad64, type: 2}
+  score: {fileID: 11400000, guid: 6bbb5e85e245fa44995c82a473419c3a, type: 2}
   value: 0
 --- !u!1 &7781910233076694953
 GameObject:
@@ -1532,6 +1535,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 11400000, guid: d3c34d068747d934fbf722770508ad64, type: 2}
   value: 1
+  capacity: 5
 --- !u!1001 &2828354310658541983
 PrefabInstance:
   m_ObjectHideFlags: 0

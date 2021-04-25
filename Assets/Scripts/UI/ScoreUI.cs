@@ -3,11 +3,11 @@ using UnityEngine;
 
 public class ScoreUI : MonoBehaviour
 {
-    [SerializeField] private Player player;
+    [SerializeField] private Score score;
     [SerializeField] private TextMeshProUGUI textMesh;
 
-    private float TimeAlive => player ? player.timeAlive ? player.timeAlive.Value : 0 : 0;
-    private float MaxDepth => player ? player.maxDepth ? player.maxDepth.Value : 0 : 0;
+    private float TimeAlive => score ? score.time : 0;
+    private float MaxDepth => score ? score.depth : 0;
 
     private void Awake()
     {

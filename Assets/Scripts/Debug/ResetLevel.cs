@@ -7,7 +7,7 @@ public class ResetLevel : MonoBehaviour
     [SerializeField] private BoxCollider2D bc;
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.R))
+        if (Input.GetKey(KeyCode.LeftControl) && Input.GetKeyDown(KeyCode.R))
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
 
         if (Input.GetMouseButtonDown(1))

@@ -6,12 +6,14 @@ using UnityEngine;
 public class TimeAlive : MonoBehaviour
 {
     [SerializeField] private Player player;
+    [SerializeField] private Score score;
     [SerializeField] private float value;
     public float Value => value;
     
     private void OnEnable()
     {
         player.timeAlive = this;
+        score.time = value;
     }
 
     private void OnDisable()
@@ -23,5 +25,6 @@ public class TimeAlive : MonoBehaviour
     private void Update()
     {
         value += Time.deltaTime;
+        score.time = value;
     }
 }

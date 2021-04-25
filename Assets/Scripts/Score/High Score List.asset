@@ -1,0 +1,55 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e9422eb736cd704f9c7efe84bc3e9fc, type: 3}
+  m_Name: High Score List
+  m_EditorClassIdentifier: 
+  highScores:
+  - rank: 1
+    name: Empty
+    depth: 0
+    time: 0
+  - rank: 2
+    name: Empty
+    depth: 0
+    time: 0
+  - rank: 3
+    name: Empty
+    depth: 0
+    time: 0
+  - rank: 4
+    name: Empty
+    depth: 0
+    time: 0
+  - rank: 5
+    name: Empty
+    depth: 0
+    time: 0
+  - rank: 6
+    name: Empty
+    depth: 0
+    time: 0
+  - rank: 7
+    name: Empty
+    depth: 0
+    time: 0
+  - rank: 8
+    name: Empty
+    depth: 0
+    time: 0
+  - rank: 9
+    name: Empty
+    depth: 0
+    time: 0
+  - rank: 10
+    name: Empty
+    depth: 0
+    time: 0

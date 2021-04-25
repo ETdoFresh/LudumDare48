@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a417b03910249f444950673d6793f7cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 11400000, guid: d3c34d068747d934fbf722770508ad64, type: 2}
-  slider: {fileID: 0}
+  score: {fileID: 11400000, guid: 6bbb5e85e245fa44995c82a473419c3a, type: 2}
+  textMesh: {fileID: 0}
 --- !u!1 &4278378021469408235
 GameObject:
   m_ObjectHideFlags: 0
@@ -295,7 +295,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 354870651058181269, guid: b7577c3cb71c06f4c9b4e4c9f03855f7, type: 3}
       propertyPath: m_Name
-      value: Canvas.Score Variant
+      value: Canvas.Score
       objectReference: {fileID: 0}
     - target: {fileID: 4614909674943345438, guid: b7577c3cb71c06f4c9b4e4c9f03855f7, type: 3}
       propertyPath: m_Pivot.x
@@ -380,6 +380,10 @@ PrefabInstance:
     - target: {fileID: 4614909674943345438, guid: b7577c3cb71c06f4c9b4e4c9f03855f7, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7425037499748602956, guid: b7577c3cb71c06f4c9b4e4c9f03855f7, type: 3}
+      propertyPath: m_SortingOrder
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 7425037499748602956, guid: b7577c3cb71c06f4c9b4e4c9f03855f7, type: 3}
       propertyPath: m_AdditionalShaderChannelsFlag

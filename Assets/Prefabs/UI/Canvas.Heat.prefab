@@ -791,7 +791,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 354870651058181269, guid: b7577c3cb71c06f4c9b4e4c9f03855f7, type: 3}
       propertyPath: m_Name
-      value: Canvas.Heat Variant
+      value: Canvas.Heat
       objectReference: {fileID: 0}
     - target: {fileID: 4614909674943345438, guid: b7577c3cb71c06f4c9b4e4c9f03855f7, type: 3}
       propertyPath: m_Pivot.x
@@ -876,6 +876,10 @@ PrefabInstance:
     - target: {fileID: 4614909674943345438, guid: b7577c3cb71c06f4c9b4e4c9f03855f7, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7425037499748602956, guid: b7577c3cb71c06f4c9b4e4c9f03855f7, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7425037499748602956, guid: b7577c3cb71c06f4c9b4e4c9f03855f7, type: 3}
       propertyPath: m_AdditionalShaderChannelsFlag

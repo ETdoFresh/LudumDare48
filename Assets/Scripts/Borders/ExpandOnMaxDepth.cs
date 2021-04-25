@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class ExpandOnMaxDepth : MonoBehaviour
 {
-    [SerializeField] private Player player;
+    [SerializeField] private Score score;
     [SerializeField] private Transform left;
     [SerializeField] private Transform right;
     [SerializeField] private float startingExtent = 15;
@@ -10,15 +10,15 @@ public class ExpandOnMaxDepth : MonoBehaviour
     [SerializeField] private float currentExtent;
     [SerializeField] private float lowestDepth = 200;
 
-    private float PlayerMaxDepth => player ? player.maxDepth ? player.maxDepth.Value : 0 : 0;
+    private float ScoreDepth => score ? score.depth : 0;
     private float Range => endingExtent - startingExtent;
     
     private void Update()
     {
-        if (PlayerMaxDepth > lowestDepth)
+        if (ScoreDepth > lowestDepth)
             currentExtent = Range + startingExtent;
         else
-            currentExtent = PlayerMaxDepth / lowestDepth * Range + startingExtent;
+            currentExtent = ScoreDepth / lowestDepth * Range + startingExtent;
         var position = right.transform.position;
         position.x = currentExtent;
         right.transform.position = position;
