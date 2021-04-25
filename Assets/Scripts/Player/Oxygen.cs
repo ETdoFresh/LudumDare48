@@ -55,6 +55,6 @@ public class Oxygen : MonoBehaviour
 
     private void TakeDamage()
     {
-        damage.WaterDamage(damageRate * Time.deltaTime);
+        damage.EnvironmentDamage(damageRate * Time.deltaTime);
     }
 }

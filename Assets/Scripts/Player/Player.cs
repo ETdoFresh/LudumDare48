@@ -12,4 +12,5 @@ public class Player : ScriptableObject
     public State state;
     public TimeAlive timeAlive;
     public MaxDepth maxDepth;
+    public Heat heat;
 }

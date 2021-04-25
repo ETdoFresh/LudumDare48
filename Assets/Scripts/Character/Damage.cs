@@ -47,7 +47,7 @@ public class Damage : MonoBehaviour
          Destroy(characterTransform.gameObject);
    }
 
-   public void WaterDamage(float amount)
+   public void EnvironmentDamage(float amount)
    {
       health -= amount;
       if (health <= 0)

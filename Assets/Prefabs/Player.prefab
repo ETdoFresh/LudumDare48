@@ -231,8 +231,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 11400000, guid: d3c34d068747d934fbf722770508ad64, type: 2}
+  characterTransform: {fileID: 0}
+  waterDetector: {fileID: 0}
+  damage: {fileID: 0}
   value: 1
   capacity: 1
+  reductionRate: 0.1
+  increaseRate: 1
+  damageRate: 0.1
 --- !u!1 &1973819494986628012
 GameObject:
   m_ObjectHideFlags: 0
@@ -901,6 +907,7 @@ Transform:
   - {fileID: 4976770053387187840}
   - {fileID: 3839394964532731803}
   - {fileID: 6036282729690220981}
+  - {fileID: 6455896153999376078}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1332,6 +1339,60 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   localInput: {fileID: 11400000, guid: ba0e54a542f480c4daeaf5b35abd896c, type: 2}
   force: 200
+--- !u!1 &7501758532550917392
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6455896153999376078}
+  - component: {fileID: 42816311461459249}
+  m_Layer: 0
+  m_Name: Heat
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6455896153999376078
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7501758532550917392}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 3729738635388659858}
+  m_RootOrder: 16
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &42816311461459249
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7501758532550917392}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fa06dac61574a3191924549bf8b2545, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 11400000, guid: d3c34d068747d934fbf722770508ad64, type: 2}
+  characterTransform: {fileID: 0}
+  damage: {fileID: 0}
+  value: 0
+  capacity: 1
+  startHeatLevel: -90
+  maxHeatLevel: -200
+  startHeatRate: 0.001
+  maxHeatRate: 1
+  coolRate: 1
+  damageRate: 1
 --- !u!1 &7581338146959478998
 GameObject:
   m_ObjectHideFlags: 0
