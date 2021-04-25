@@ -1,13 +1,36 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
+using UnityEngine.UI;
 
 public class HighScoreEntryUI : MonoBehaviour
 {
     [SerializeField] private TMP_InputField inputField;
     [SerializeField] private HighScoreList highScoreList;
     [SerializeField] private Score score;
+    [SerializeField] private Button submitButton;
+    [SerializeField] private UnityEvent skipHighScoreEntry;
+
+    private void OnEnable()
+    {
+        StartCoroutine(CheckHighScores());
+    }
+
+    private IEnumerator CheckHighScores()
+    {
+        submitButton.interactable = false;
+        yield return highScoreList.DownloadHighScores();
+        if (score.depth <= highScoreList.highScores[9].depth)
+        {
+            skipHighScoreEntry.Invoke();
+            gameObject.SetActive(false);
+        }
+        else
+            submitButton.interactable = true;
+    }
 
     public void SetHighScore()
     {

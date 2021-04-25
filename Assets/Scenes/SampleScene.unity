@@ -3143,6 +3143,38 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3045316110719815496, guid: bc0aaa7987448e344b3cd3e62ac0e35a, type: 3}
+      propertyPath: skipHighScoreEntry.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3045316110719815496, guid: bc0aaa7987448e344b3cd3e62ac0e35a, type: 3}
+      propertyPath: skipHighScoreEntry.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3045316110719815496, guid: bc0aaa7987448e344b3cd3e62ac0e35a, type: 3}
+      propertyPath: skipHighScoreEntry.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 8051528502130460830}
+    - target: {fileID: 3045316110719815496, guid: bc0aaa7987448e344b3cd3e62ac0e35a, type: 3}
+      propertyPath: skipHighScoreEntry.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3045316110719815496, guid: bc0aaa7987448e344b3cd3e62ac0e35a, type: 3}
+      propertyPath: skipHighScoreEntry.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetActive
+      objectReference: {fileID: 0}
+    - target: {fileID: 3045316110719815496, guid: bc0aaa7987448e344b3cd3e62ac0e35a, type: 3}
+      propertyPath: skipHighScoreEntry.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: UnityEngine.GameObject, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 3045316110719815496, guid: bc0aaa7987448e344b3cd3e62ac0e35a, type: 3}
+      propertyPath: skipHighScoreEntry.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3045316110719815496, guid: bc0aaa7987448e344b3cd3e62ac0e35a, type: 3}
+      propertyPath: skipHighScoreEntry.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 3247218152901385988, guid: bc0aaa7987448e344b3cd3e62ac0e35a, type: 3}
       propertyPath: m_Name
       value: Canvas.HighScoreEntry

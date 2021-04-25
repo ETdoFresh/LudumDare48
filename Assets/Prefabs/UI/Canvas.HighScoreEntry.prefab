@@ -552,6 +552,10 @@ MonoBehaviour:
   inputField: {fileID: 2013622056112627621}
   highScoreList: {fileID: 11400000, guid: 073a20b200031594488b612d6e966f5f, type: 2}
   score: {fileID: 11400000, guid: 6bbb5e85e245fa44995c82a473419c3a, type: 2}
+  submitButton: {fileID: 4192516359606703268}
+  skipHighScoreEntry:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &3416626569827796897
 GameObject:
   m_ObjectHideFlags: 0
