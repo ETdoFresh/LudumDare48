@@ -38,8 +38,20 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Background
+    uniqueID: 2265867535
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Water
+    uniqueID: 2519131305
+    locked: 0
+  - name: Dirt
+    uniqueID: 1605689669
+    locked: 0
+  - name: Item
+    uniqueID: 3730319293
     locked: 0
   - name: Horizontal Borders
     uniqueID: 914698493
