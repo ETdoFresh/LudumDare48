@@ -16,7 +16,7 @@ public class ExpandOnMaxDepth : MonoBehaviour
     private void Update()
     {
         if (PlayerMaxDepth > lowestDepth)
-            currentExtent = lowestDepth;
+            currentExtent = Range + startingExtent;
         else
             currentExtent = PlayerMaxDepth / lowestDepth * Range + startingExtent;
         var position = right.transform.position;

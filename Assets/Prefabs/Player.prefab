@@ -231,7 +231,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 11400000, guid: d3c34d068747d934fbf722770508ad64, type: 2}
-  value: 0
+  value: 1
+  capacity: 1
 --- !u!1 &1973819494986628012
 GameObject:
   m_ObjectHideFlags: 0
@@ -329,6 +330,79 @@ MonoBehaviour:
   stunBehaviour: {fileID: 0}
   health: 15
   healthCapacity: 5
+--- !u!1 &2310829068300814484
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6036282729690220981}
+  - component: {fileID: 8599183202821197255}
+  - component: {fileID: 3284746541146319642}
+  m_Layer: 6
+  m_Name: WaterDetector
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6036282729690220981
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2310829068300814484}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.401, z: 0}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_Children: []
+  m_Father: {fileID: 3729738635388659858}
+  m_RootOrder: 15
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &8599183202821197255
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2310829068300814484}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
+--- !u!114 &3284746541146319642
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2310829068300814484}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e767d55d19573414689fe9e3ba0c7635, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inWater: 0
+  waterLevel: -50.25
+  characterTransform: {fileID: 0}
 --- !u!1 &2365468476852931819
 GameObject:
   m_ObjectHideFlags: 0
@@ -826,6 +900,7 @@ Transform:
   - {fileID: 512985796}
   - {fileID: 4976770053387187840}
   - {fileID: 3839394964532731803}
+  - {fileID: 6036282729690220981}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1489,13 +1564,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f4bd647426ec6f74fad680ddff97ffe7, type: 3}
---- !u!1 &3197941788989546943 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 801933614884726816, guid: f4bd647426ec6f74fad680ddff97ffe7, type: 3}
-  m_PrefabInstance: {fileID: 2828354310658541983}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3197941788989546940 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 801933614884726819, guid: f4bd647426ec6f74fad680ddff97ffe7, type: 3}
+  m_PrefabInstance: {fileID: 2828354310658541983}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &3197941788989546943 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 801933614884726816, guid: f4bd647426ec6f74fad680ddff97ffe7, type: 3}
   m_PrefabInstance: {fileID: 2828354310658541983}
   m_PrefabAsset: {fileID: 0}
