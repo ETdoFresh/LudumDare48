@@ -57,7 +57,7 @@ public class BreakApartChunk : MonoBehaviour
         var newChunk = Instantiate(chunkPrefab, groundParent);
         newChunk.transform.localScale = new Vector3(scaleX, scaleY, 1);
         newChunk.transform.position = new Vector3(positionX, positionY, 0);
-        newChunk.name = "ChunkLeft" + (int.Parse(Regex.Replace(chunkTransform.name, @"[A-Za-z]", "")) + 1);
+        newChunk.name = chunkTransform.name + "L";
         return newChunk;
     }
 
@@ -73,7 +73,7 @@ public class BreakApartChunk : MonoBehaviour
         var newChunk = Instantiate(chunkPrefab, groundParent);
         newChunk.transform.localScale = new Vector3(scaleX, scaleY, 1);
         newChunk.transform.position = new Vector3(positionX, positionY, 0);
-        newChunk.name = "ChunkRight" + (int.Parse(Regex.Replace(chunkTransform.name, @"[A-Za-z]", "")) + 1);
+        newChunk.name = chunkTransform.name + "R";
         return newChunk;
     }
 
@@ -88,7 +88,7 @@ public class BreakApartChunk : MonoBehaviour
         var newChunk = Instantiate(chunkPrefab, groundParent);
         newChunk.transform.localScale = new Vector3(scaleX, scaleY, 1);
         newChunk.transform.position = new Vector3(positionX, positionY, 0);
-        newChunk.name = "ChunkBottom" + (int.Parse(Regex.Replace(chunkTransform.name, @"[A-Za-z]", "")) + 1);
+        newChunk.name = chunkTransform.name + "B";
         return newChunk;
     }
     
@@ -103,7 +103,7 @@ public class BreakApartChunk : MonoBehaviour
         var newChunk = Instantiate(chunkPrefab, groundParent);
         newChunk.transform.localScale = new Vector3(scaleX, scaleY, 1);
         newChunk.transform.position = new Vector3(positionX, positionY, 0);
-        newChunk.name = "ChunkBottom" + (int.Parse(Regex.Replace(chunkTransform.name, @"[A-Za-z]", "")) + 1);
+        newChunk.name = chunkTransform.name + "T";
         return newChunk;
     }
 }

@@ -55,6 +55,7 @@ public class SwingAxeAction : MonoBehaviour
             spawnPosition = new Vector3((float) coordinates.x / map.cellsPerUnit,
                 (float) coordinates.y / map.cellsPerUnit, 0);
             digInstance = _digTrigger.CreateNewActiveDigInstance(spawnPosition, myTransform.lossyScale);
+            Destroy(digInstance, duration);
         }
 
         const float startRotation = -45f;
@@ -73,7 +74,6 @@ public class SwingAxeAction : MonoBehaviour
 
         _swingAxeModel.DeactivateGameObject();
         _swingAxeTrigger.DeactivateGameObject();
-        if (digInstance) Destroy(digInstance);
         _coroutine = null;
     }
 }
