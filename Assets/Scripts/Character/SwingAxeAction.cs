@@ -7,6 +7,7 @@ public class SwingAxeAction : MonoBehaviour
     [SerializeField] private AudioPlayer swingAxeSound;
     [SerializeField] private float duration = 1;
     [SerializeField] private float cooldown = 1;
+    [SerializeField] private Map map;
     private Transform _characterTransform;
     private SwingAxeModel _swingAxeModel;
     private SwingAxeTrigger _swingAxeTrigger;
@@ -46,8 +47,17 @@ public class SwingAxeAction : MonoBehaviour
             ? _characterTransform.TransformPoint(-localPosition.x, localPosition.y, localPosition.z)
             : myTransform.position;
         _swingAxeTrigger.transform.position = spawnPosition;
-        var digInstance = _digTrigger.CreateNewActiveDigInstance(spawnPosition, myTransform.lossyScale);
-        var startRotation = -45f;
+
+        var digInstance = (GameObject) null;
+        if (!map.HasDigSquare(spawnPosition))
+        {
+            var coordinates = map.Dig(spawnPosition);
+            spawnPosition = new Vector3((float) coordinates.x / map.cellsPerUnit,
+                (float) coordinates.y / map.cellsPerUnit, 0);
+            digInstance = _digTrigger.CreateNewActiveDigInstance(spawnPosition, myTransform.lossyScale);
+        }
+
+        const float startRotation = -45f;
         var finishRotation = _direction.IsLeft ? startRotation + 135f : startRotation - 135f;
         var startTime = Time.time;
         var finishTime = startTime + duration;
@@ -63,7 +73,7 @@ public class SwingAxeAction : MonoBehaviour
 
         _swingAxeModel.DeactivateGameObject();
         _swingAxeTrigger.DeactivateGameObject();
-        Destroy(digInstance);
+        if (digInstance) Destroy(digInstance);
         _coroutine = null;
     }
 }

@@ -546,6 +546,7 @@ MonoBehaviour:
   swingAxeSound: {fileID: 11400000, guid: 4f057b01dbe52d34896005af00955408, type: 2}
   duration: 0.2
   cooldown: 1
+  map: {fileID: 11400000, guid: 59ef817bdfadfdd4c8fc16063600bd69, type: 2}
 --- !u!1 &3340466991107722741
 GameObject:
   m_ObjectHideFlags: 0
