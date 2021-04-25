@@ -338,6 +338,9 @@ MonoBehaviour:
   health: 5
   healthCapacity: 5
   dropBehaviour: {fileID: 0}
+  dead:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &2310829068300814484
 GameObject:
   m_ObjectHideFlags: 0
@@ -1489,6 +1492,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   localInput: {fileID: 11400000, guid: ba0e54a542f480c4daeaf5b35abd896c, type: 2}
+  hopSound: {fileID: 11400000, guid: 3a103ad0ead95914da1e8521b9a0aa51, type: 2}
   hopForce: 40
 --- !u!1 &8600647706891398598
 GameObject:

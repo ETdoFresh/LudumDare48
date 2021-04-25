@@ -7,6 +7,7 @@ public class ShowAfterDepth : MonoBehaviour
     [SerializeField] private float depthToShow;
     [SerializeField] private bool showIfGotAirTank;
     [SerializeField] private bool showIfGotCoolingWisp;
+    [SerializeField] private AudioPlayer sound;
 
     private float CurrentDepth => player ? player.maxDepth ? player.maxDepth.Value : 0 : 0;
     private bool HasAirTank => player && player.oxygen && player.oxygen.AirTankCount > 0;
@@ -17,8 +18,12 @@ public class ShowAfterDepth : MonoBehaviour
         var show = CurrentDepth >= depthToShow;
         show |= showIfGotAirTank && HasAirTank;
         show |= showIfGotCoolingWisp && HasCoolingWisp;
+        
         if (!show) return;
         uiElement.SetActive(true);
+        
+        if (CurrentDepth < depthToShow) return;
+        sound.Play();
         Destroy(this);
     }
 }
