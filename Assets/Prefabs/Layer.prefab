@@ -315,6 +315,18 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2539384994875013927, guid: e8817e46fd71fe34b97deb6f6aebf9eb, type: 3}
+      propertyPath: m_Size.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2539384994875013927, guid: e8817e46fd71fe34b97deb6f6aebf9eb, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: f6787ebd456c74642805b0376989b09c, type: 3}
+    - target: {fileID: 2539384994875013927, guid: e8817e46fd71fe34b97deb6f6aebf9eb, type: 3}
+      propertyPath: m_DrawMode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2539384994875013927, guid: e8817e46fd71fe34b97deb6f6aebf9eb, type: 3}
       propertyPath: m_SortingLayer
       value: 2
       objectReference: {fileID: 0}
@@ -322,6 +334,14 @@ PrefabInstance:
       propertyPath: m_SortingLayerID
       value: 1605689669
       objectReference: {fileID: 0}
+    - target: {fileID: 2539384994875013927, guid: e8817e46fd71fe34b97deb6f6aebf9eb, type: 3}
+      propertyPath: m_SpriteTileMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2539384994875013927, guid: e8817e46fd71fe34b97deb6f6aebf9eb, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: dfe5f5400799c694d8052e4fedc097bb, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e8817e46fd71fe34b97deb6f6aebf9eb, type: 3}
 --- !u!4 &2389493618106486970 stripped
